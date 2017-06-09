@@ -1,0 +1,22 @@
+{
+  "name": "scheduler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austindh/scheduler.git"
+  },
+  "author": "Austin Hughes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/austindh/scheduler/issues"
+  },
+  "homepage": "https://github.com/austindh/scheduler#readme",
+  "dependencies": {
+    "node-schedule": "^1.2.3"
+  }
+}
