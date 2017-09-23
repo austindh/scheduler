@@ -120,9 +120,16 @@ function parse( timeString ) {
 }
 
 // Schedule function
-function schedule( timeString, callback ) {
-	let time = parse( timeString );
-	return nodeSchedule.scheduleJob( time, () => callback() );
+function schedule( time, callback ) {
+
+	let timeObject;
+	if ( time instanceof Date || time instanceof Object ) {
+		timeObject = time;
+	} else {
+		timeObject = parse( time );
+	}
+
+	return nodeSchedule.scheduleJob( timeObject, () => callback() );
 }
 
 module.exports = {

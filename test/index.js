@@ -30,12 +30,22 @@ describe( 'Better scheduler', () => {
 
 	});
 
+	const isJobObject = obj => {
+		expect( obj ).to.haveOwnProperty( 'job' );
+		expect( obj ).to.haveOwnProperty( 'name' );
+		expect( obj ).to.haveOwnProperty( 'cancel' );
+		expect( obj.constructor.name ).to.equal( 'Job' );
+	};
+
 	it( 'Schedules properly using node-schedule', () => {
 		let a = schedule( 'Mondays at 6pm', () => console.log( 'hi' ) );
-		expect( a ).to.haveOwnProperty( 'job' );
-		expect( a ).to.haveOwnProperty( 'name' );
-		expect( a ).to.haveOwnProperty( 'cancel' );
-		expect( a.constructor.name ).to.equal( 'Job' );
+		isJobObject( a );
+	});
+
+	it( 'schedule() can take string, Date object, or normal node-scheduler object', () => {
+		let func = () => {};
+		isJobObject( schedule( new Date, func ) );
+		isJobObject( schedule({ hour: 12, minute: 0, func }) );
 	});
 
 });
