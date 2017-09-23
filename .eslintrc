@@ -1,0 +1,49 @@
+{
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaVersion": 8,
+		"ecmaFeatures": {
+			"impliedStrict": true
+		}
+	},
+	"env": {
+		"node": true,
+		"mocha": true
+	},
+	"globals": {
+		"Set": true,
+		"let": true,
+		"Promise": true,
+		"Proxy": true,
+		"Reflect": true
+	},
+	"rules": {
+		"no-console": 0,
+		"eqeqeq": ["error", "allow-null"],
+		"no-extend-native": "error",
+		"no-floating-decimal": "error",
+		"array-bracket-spacing": ["error", "always", { "objectsInArrays": false }],
+		"block-spacing": ["error", "always"],
+		"brace-style": ["error", "1tbs"],
+		"computed-property-spacing": ["error", "always"],
+		"comma-dangle": ["error", "never"],
+		"comma-spacing": ["error", {"before": false, "after": true}],
+		"comma-style": ["error", "last"],
+		"no-spaced-func": "error",
+		"no-trailing-spaces": "error",
+		"no-var": "error",
+		"no-whitespace-before-property": "error",
+		"object-curly-spacing": ["error", "always"],
+		"quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true}],
+		"semi-spacing": ["error", {"before": false, "after": true}],
+		"space-in-parens": ["error", "always", {"exceptions": ["{}"]}],
+		"space-before-blocks": "error",
+		"space-infix-ops": "error",
+		"space-unary-ops": ["error", {"words": true, "nonwords": false}],
+		"template-curly-spacing": ["error", "always"],
+		"arrow-spacing": ["error", { "before": true, "after": true }],
+		"arrow-parens": ["error", "as-needed"],
+		"semi": "error",
+		"keyword-spacing" :["error", {"before": true, "after": true}]
+	}
+}
